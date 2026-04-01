@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="TrustDocs Privacy Policy - Learn how we collect, use, and protect your personal information and documents in our secure digital document management application.">
+    <meta name="keywords" content="TrustDocs, privacy policy, data protection, document security, digital storage, user privacy">
+    <meta name="author" content="TrustDocs">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Privacy Policy - TrustDocs">
+    <meta property="og:description" content="Learn how TrustDocs protects your privacy and secures your important documents.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trustdocs.app/privacy-policy">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy - TrustDocs">
+    <meta name="twitter:description" content="Learn how TrustDocs protects your privacy and secures your important documents.">
+    
+    <title>Privacy Policy - TrustDocs | Secure Document Management</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.6s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #2196F3;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(33, 150, 243, 0.1);
+        }
+        
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(33, 150, 243, 0.3);
+        }
+        
+        .icon-wrapper {
+            transition: transform 0.3s ease;
+        }
+        
+        .section-card:hover .icon-wrapper {
+            transform: scale(1.1);
+        }
+        
+        /* Animated Bubbles */
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(33, 150, 243, 0.15), rgba(33, 150, 243, 0.05));
+            pointer-events: none;
+            animation: vibrate 4s ease-in-out infinite;
+        }
+        
+        @keyframes vibrate {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.6;
+            }
+            25% {
+                transform: translate(5px, -8px) scale(1.05);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translate(-5px, 5px) scale(0.95);
+                opacity: 0.5;
+            }
+            75% {
+                transform: translate(8px, 3px) scale(1.02);
+                opacity: 0.65;
+            }
+        }
+        
+        .bubble:nth-child(1) { 
+            left: 5%; 
+            top: 10%; 
+            width: 40px; 
+            height: 40px; 
+            animation-duration: 5s; 
+            animation-delay: 0s; 
+        }
+        .bubble:nth-child(2) { 
+            left: 15%; 
+            top: 60%; 
+            width: 30px; 
+            height: 30px; 
+            animation-duration: 4.5s; 
+            animation-delay: 1s; 
+        }
+        .bubble:nth-child(3) { 
+            left: 85%; 
+            top: 20%; 
+            width: 50px; 
+            height: 50px; 
+            animation-duration: 6s; 
+            animation-delay: 0.5s; 
+        }
+        .bubble:nth-child(4) { 
+            left: 70%; 
+            top: 70%; 
+            width: 35px; 
+            height: 35px; 
+            animation-duration: 5.5s; 
+            animation-delay: 2s; 
+        }
+        .bubble:nth-child(5) { 
+            left: 90%; 
+            top: 45%; 
+            width: 45px; 
+            height: 45px; 
+            animation-duration: 4.8s; 
+            animation-delay: 1.5s; 
+        }
+        .bubble:nth-child(6) { 
+            left: 25%; 
+            top: 85%; 
+            width: 38px; 
+            height: 38px; 
+            animation-duration: 5.2s; 
+            animation-delay: 0.8s; 
+        }
+        .bubble:nth-child(7) { 
+            left: 50%; 
+            top: 30%; 
+            width: 42px; 
+            height: 42px; 
+            animation-duration: 4.7s; 
+            animation-delay: 2.5s; 
+        }
+        .bubble:nth-child(8) { 
+            left: 10%; 
+            top: 40%; 
+            width: 28px; 
+            height: 28px; 
+            animation-duration: 5.3s; 
+            animation-delay: 1.8s; 
+        }
+        .bubble:nth-child(9) { 
+            left: 60%; 
+            top: 15%; 
+            width: 33px; 
+            height: 33px; 
+            animation-duration: 4.9s; 
+            animation-delay: 0.3s; 
+        }
+        .bubble:nth-child(10) { 
+            left: 40%; 
+            top: 75%; 
+            width: 36px; 
+            height: 36px; 
+            animation-duration: 5.6s; 
+            animation-delay: 2.2s; 
+        }
+        
+        .bubble-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Mobile adjustments for bubbles */
+        @media (max-width: 768px) {
+            .bubble:nth-child(1) { width: 25px; height: 25px; }
+            .bubble:nth-child(2) { width: 20px; height: 20px; }
+            .bubble:nth-child(3) { width: 30px; height: 30px; }
+            .bubble:nth-child(4) { width: 22px; height: 22px; }
+            .bubble:nth-child(5) { width: 28px; height: 28px; }
+            .bubble:nth-child(6) { width: 24px; height: 24px; }
+            .bubble:nth-child(7) { width: 26px; height: 26px; }
+            .bubble:nth-child(8) { width: 18px; height: 18px; }
+            .bubble:nth-child(9) { width: 21px; height: 21px; }
+            .bubble:nth-child(10) { width: 23px; height: 23px; }
+        }
+        
+        /* Mobile First Responsive Design - Google Play Store Ready */
+        /* Extra Large Screens */
+        @media (min-width: 1536px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+        
+        /* Large Screens */
+        @media (max-width: 1280px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        /* Medium-Large Screens */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+        
+        /* Tablets */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Small Tablets & Large Phones */
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 1.75rem;
+            }
+            body {
+                font-size: 15px;
+            }
+        }
+        
+        /* Standard Phones */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* iPhone SE, Small Phones */
+        @media (max-width: 375px) {
+            .hero-title {
+                font-size: 1.375rem;
+            }
+            body {
+                font-size: 14px;
+            }
+        }
+        
+        /* Very Small Devices */
+        @media (max-width: 320px) {
+            .hero-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-50 text-gray-800 relative overflow-x-hidden">
+
+    <!-- Animated Bubbles Background -->
+    <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full top-0 z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center space-x-2 sm:space-x-3 slide-in">
+                    <img src="logo.png" alt="TrustDocs Logo" class="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain">
+                    <span class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">TrustDocs</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                    <a href="#overview" class="nav-link text-gray-600 hover:text-blue-600 text-sm font-medium">Overview</a>
+                    <a href="#data-collection" class="nav-link text-gray-600 hover:text-blue-600 text-sm font-medium">Data Collection</a>
+                    <a href="#security" class="nav-link text-gray-600 hover:text-blue-600 text-sm font-medium">Security</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-600 text-sm font-medium">Contact</a>
+                </div>
+                <a href="mailto:trustdocs.app@gmail.com" class="btn-primary bg-blue-600 text-white px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-2.5 text-xs sm:text-sm font-medium hover:bg-blue-700">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-4xl mx-auto text-center fade-in">
+            <div class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6 text-xs sm:text-sm font-medium">
+                <svg class="w-3 h-3 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Effective Date: April 1, 2026</span>
+            </div>
+            <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                Privacy Policy
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4">
+                Your privacy matters to us. Learn how TrustDocs collects, uses, and protects your personal information.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 relative z-10">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-5 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-2 sm:mb-3">Overview</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                            TrustDocs is a digital document management application designed to help users securely store, manage, and access important personal documents. We respect the privacy of our users and are committed to protecting their personal information.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Information We Collect Section -->
+        <section id="data-collection" class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4"></div>
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Information We Collect</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                            The application may collect limited information necessary for functionality and security. This may include:
+                        </p>
+                        <ul class="space-y-2.5 sm:space-y-3">
+                            <li class="flex items-start space-x-2 sm:space-x-3">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700">Email address (for user account creation and login authentication)</span>
+                            </li>
+                            <li class="flex items-start space-x-2 sm:space-x-3">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700">Basic device information such as device model, operating system, and device identifiers</span>
+                            </li>
+                            <li class="flex items-start space-x-2 sm:space-x-3">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700">Application usage data to monitor performance and stability</span>
+                            </li>
+                            <li class="flex items-start space-x-2 sm:space-x-3">
+                                <svg class="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-sm sm:text-base text-gray-700">Documents uploaded by users for storage within the app</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mt-4 sm:mt-6">
+                            This information is collected only to ensure proper operation of the application and improve user experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Purpose of Data Collection Section -->
+        <section class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Purpose of Data Collection</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                            The collected information may be used for the following purposes:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                            <div class="bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-600">
+                                <p class="text-gray-700 text-xs sm:text-sm">To create and manage user accounts</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-600">
+                                <p class="text-gray-700 text-xs sm:text-sm">To enable secure login and authentication</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-600">
+                                <p class="text-gray-700 text-xs sm:text-sm">To store and organize user documents within the application</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-600">
+                                <p class="text-gray-700 text-xs sm:text-sm">To improve application performance and stability</p>
+                            </div>
+                            <div class="bg-blue-50 p-3 sm:p-4 border-l-4 border-blue-600 md:col-span-2">
+                                <p class="text-gray-700 text-xs sm:text-sm">To provide technical support and maintain service quality</p>
+                            </div>
+                        </div>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mt-4 sm:mt-6">
+                            The application only collects data that is necessary for providing its core functionality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Third-Party Services Section -->
+        <section class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Third-Party Services</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
+                            TrustDocs may use trusted third-party services to improve functionality and support the application. These services may collect certain information in accordance with their own privacy policies.
+                        </p>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">Such third-party services may include:</p>
+                        <ul class="space-y-2.5 sm:space-y-3 mb-4 sm:mb-6">
+                            <li class="flex items-center space-x-2 sm:space-x-3">
+                                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Google authentication services</span>
+                            </li>
+                            <li class="flex items-center space-x-2 sm:space-x-3">
+                                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Application analytics tools</span>
+                            </li>
+                            <li class="flex items-center space-x-2 sm:space-x-3">
+                                <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 flex-shrink-0"></div>
+                                <span class="text-sm sm:text-base text-gray-700">Advertising services such as Google AdMob</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                            These services help us maintain the app and support its development. Any data collected by these services is handled according to their respective privacy policies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Data Security Section -->
+        <section id="security" class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Data Security</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4"></p>
+                            TrustDocs takes appropriate security measures to protect user information. We implement modern technical safeguards to prevent unauthorized access, misuse, alteration, or disclosure of personal data.
+                        </p>
+                        <div class="bg-amber-50 border-l-4 border-amber-500 p-3 sm:p-4 mt-3 sm:mt-4">
+                            <p class="text-gray-700 text-xs sm:text-sm">
+                                While we strive to protect user information using industry-standard security practices, no digital platform can guarantee absolute security.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- User Data Deletion Section -->
+        <section class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">User Data Deletion</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed"></p>
+                            Users have the right to request deletion of their personal data at any time. If a user wishes to delete their account or request removal of their stored information, they may contact us using the email address provided below. Upon receiving a valid request, we will process the deletion of user data within a reasonable time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Children's Privacy Section -->
+        <section class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Children's Privacy</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed"></p>
+                            TrustDocs is not intended for use by children under the age of 13. We do not knowingly collect personal information from children.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Policy Updates Section -->
+        <section class="mb-12 md:mb-16 fade-in">
+            <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-blue-100 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Policy Updates</h2>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                            This Privacy Policy may be updated from time to time to reflect improvements or changes in the application. Any updates will be published on this page with a revised effective date.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Information Section -->
+        <section id="contact" class="mb-12 fade-in">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-4 sm:p-6 md:p-10 text-white shadow-lg">
+                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+                    <div class="icon-wrapper bg-white/20 p-2.5 sm:p-3 md:p-4">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4">Contact Information</h2>
+                        <p class="text-sm sm:text-base text-blue-50 leading-relaxed mb-4 sm:mb-6"></p>
+                            If users have any questions or requests regarding this Privacy Policy or their personal data, they may contact us at:
+                        </p>
+                        <a href="mailto:trustdocs.app@gmail.com" class="inline-flex items-center space-x-2 bg-white text-blue-600 px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-medium hover:bg-blue-50 transition-all duration-300 hover:shadow-lg break-all">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            <span class="text-sm sm:text-base">trustdocs.app@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                        <img src="logo.png" alt="TrustDocs Logo" class="w-7 h-7 sm:w-8 sm:h-8 object-contain">
+                        <span class="text-lg sm:text-xl font-semibold text-white">TrustDocs</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                        Secure digital document management for everyone. Keep your important files safe and accessible.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wider">Quick Links</h3>
+                    <ul class="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+                        <li><a href="#overview" class="hover:text-blue-400 transition-colors">Overview</a></li>
+                        <li><a href="#data-collection" class="hover:text-blue-400 transition-colors">Data Collection</a></li>
+                        <li><a href="#security" class="hover:text-blue-400 transition-colors">Security</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-3 sm:mb-4 text-xs sm:text-sm uppercase tracking-wider">Legal</h3>
+                    <ul class="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-400">
+                <p>&copy; 2026 TrustDocs. All rights reserved. | Last updated: April 1, 2026</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 bg-blue-600 text-white p-2.5 sm:p-3 shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 pointer-events-none z-40 hover:scale-110">
+        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <script>
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.opacity = '1';
+                scrollToTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+                scrollToTopBtn.style.pointerEvents = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed nav
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Prevent horizontal scroll on mobile
+        document.body.style.overflowX = 'hidden';
+    </script>
+
+</body>
+</html>
