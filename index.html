@@ -114,6 +114,82 @@
             transform: scale(1.1);
         }
         
+        /* Glowing Blue Bullet */
+        .glowing-bullet {
+            width: 12px;
+            height: 12px;
+            background: #2196F3;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(33, 150, 243, 0.6), 0 0 20px rgba(33, 150, 243, 0.4);
+            animation: glow 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(33, 150, 243, 0.6), 0 0 20px rgba(33, 150, 243, 0.4);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(33, 150, 243, 0.8), 0 0 30px rgba(33, 150, 243, 0.6);
+                transform: scale(1.1);
+            }
+        }
+        
+        /* Neon Glow Divider */
+        .neon-divider {
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(33, 150, 243, 0.3) 20%, 
+                rgba(33, 150, 243, 0.8) 50%, 
+                rgba(33, 150, 243, 0.3) 80%, 
+                transparent 100%);
+            box-shadow: 0 0 10px rgba(33, 150, 243, 0.5), 
+                        0 0 20px rgba(33, 150, 243, 0.3),
+                        0 0 30px rgba(33, 150, 243, 0.2);
+            animation: neonFlow 3s ease-in-out infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .neon-divider::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(255, 255, 255, 0.8) 50%, 
+                transparent 100%);
+            animation: neonSlide 2s linear infinite;
+        }
+        
+        @keyframes neonFlow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(33, 150, 243, 0.5), 
+                            0 0 20px rgba(33, 150, 243, 0.3),
+                            0 0 30px rgba(33, 150, 243, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(33, 150, 243, 0.8), 
+                            0 0 40px rgba(33, 150, 243, 0.5),
+                            0 0 60px rgba(33, 150, 243, 0.3);
+            }
+        }
+        
+        @keyframes neonSlide {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 200%;
+            }
+        }
+        
         /* Animated Bubbles */
         .bubble {
             position: absolute;
@@ -333,7 +409,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 md:h-20">
                 <div class="flex items-center space-x-2 sm:space-x-3 slide-in">
-                    <img src="logo.png" alt="TrustDocs Logo" class="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain">
+                    <img src="logo.png" alt="TrustDocs Logo" class="w-11 h-11 sm:w-12 sm:h-12 md:w-14 md:h-14 object-contain">
                     <span class="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">TrustDocs</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
@@ -353,7 +429,7 @@
     <!-- Hero Section -->
     <section class="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-4xl mx-auto text-center fade-in">
-            <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+            <h1 class="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent mb-4 sm:mb-6 leading-tight">
                 Privacy Policy
             </h1>
             <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-4 mb-4 sm:mb-6">
@@ -372,15 +448,16 @@
     <!-- Main Content -->
     <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 relative z-10">
         
+        <!-- Neon Glow Divider -->
+        <div class="neon-divider mb-12 md:mb-16"></div>
+        
         <!-- Overview Section -->
         <section id="overview" class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-5 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">👁️</span>
-                    </div>
-                    <div>
-                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-2 sm:mb-3">Overview</h2>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
+                    <div class="flex-1">
+                        <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Overview</h2>
                         <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                             TrustDocs is a digital document management application designed to help users securely store, manage, and access important personal documents. We respect the privacy of our users and are committed to protecting their personal information.
                         </p>
@@ -393,10 +470,8 @@
         <!-- Information We Collect Section -->
         <section id="data-collection" class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">📄</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Information We Collect</h2>
                         <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
@@ -440,10 +515,8 @@
         <!-- Purpose of Data Collection Section -->
         <section class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">📋</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Purpose of Data Collection</h2>
                         <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
@@ -478,10 +551,8 @@
         <!-- Third-Party Services Section -->
         <section class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">↔️</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Third-Party Services</h2>
                         <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-4 sm:mb-6">
@@ -514,13 +585,11 @@
         <!-- Data Security Section -->
         <section id="security" class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">🛡️</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Data Security</h2>
-                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4"></p>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-3 sm:mb-4">
                             TrustDocs takes appropriate security measures to protect user information. We implement modern technical safeguards to prevent unauthorized access, misuse, alteration, or disclosure of personal data.
                         </p>
                         <div class="bg-amber-50 border-l-4 border-amber-500 p-3 sm:p-4 mt-3 sm:mt-4">
@@ -537,13 +606,11 @@
         <!-- User Data Deletion Section -->
         <section class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">❌</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">User Data Deletion</h2>
-                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed"></p>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                             Users have the right to request deletion of their personal data at any time. If a user wishes to delete their account or request removal of their stored information, they may contact us using the email address provided below. Upon receiving a valid request, we will process the deletion of user data within a reasonable time.
                         </p>
                     </div>
@@ -554,13 +621,11 @@
         <!-- Children's Privacy Section -->
         <section class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">👥</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Children's Privacy</h2>
-                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed"></p>
+                        <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
                             TrustDocs is not intended for use by children under the age of 13. We do not knowingly collect personal information from children.
                         </p>
                     </div>
@@ -572,10 +637,8 @@
         <!-- Policy Updates Section -->
         <section class="mb-12 md:mb-16 fade-in">
             <div class="bg-white p-4 sm:p-6 md:p-10 shadow-sm border border-gray-100 section-card">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">🔄</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Policy Updates</h2>
                         <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -590,13 +653,11 @@
         <!-- Contact Information Section -->
         <section id="contact" class="mb-12 fade-in">
             <div class="bg-gradient-to-br from-blue-600 to-blue-700 p-4 sm:p-6 md:p-10 text-white shadow-lg">
-                <div class="flex items-start space-x-3 sm:space-x-4 mb-4 sm:mb-6">
-                    <div class="icon-wrapper p-2.5 sm:p-3 md:p-4 flex items-center justify-center">
-                        <span class="text-3xl sm:text-4xl md:text-5xl">✉️</span>
-                    </div>
+                <div class="flex items-start space-x-3 sm:space-x-4">
+                    <div class="glowing-bullet mt-1" style="background: white; box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);"></div>
                     <div class="flex-1">
                         <h2 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4">Contact Information</h2>
-                        <p class="text-sm sm:text-base text-blue-50 leading-relaxed mb-4 sm:mb-6"></p>
+                        <p class="text-sm sm:text-base text-blue-50 leading-relaxed mb-4 sm:mb-6">
                             If users have any questions or requests regarding this Privacy Policy or their personal data, they may contact us at:
                         </p>
                         <a href="mailto:trustdocs.app@gmail.com" class="inline-flex items-center space-x-2 bg-white text-blue-600 px-4 py-2.5 sm:px-6 sm:py-3 text-sm sm:text-base font-medium hover:bg-blue-50 transition-all duration-300 hover:shadow-lg break-all">
@@ -614,12 +675,12 @@
 
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
+    <footer class="bg-gray-900 text-gray-300 py-8 sm:py-10 md:py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto text-center">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
                 <div>
-                    <div class="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-                        <img src="logo.png" alt="TrustDocs Logo" class="w-11 h-11 sm:w-12 sm:h-12 object-contain">
+                    <div class="flex items-center justify-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                        <img src="logo.png" alt="TrustDocs Logo" class="w-10 h-10 sm:w-11 sm:h-11 object-contain">
                         <span class="text-lg sm:text-xl font-semibold text-white">TrustDocs</span>
                     </div>
                     <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
